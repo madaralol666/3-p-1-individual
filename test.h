@@ -5,8 +5,7 @@ public:
 	double PowDI(double&, int&);
 	double PowDD(double&, double&);
 	double DoubleInt(unsigned int&, unsigned int&);
-	int Icoun
-		tMoney(int&, int&);
+	void IcountMoney(unsigned int&, unsigned int&);
 
 };
 
