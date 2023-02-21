@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <string>
 #include "test.h"
 using namespace std;
 
@@ -6,24 +7,6 @@ int main()
 {
     setlocale(LC_ALL, "RU");
     test a;
-    unsigned int wada;
-    while (!(cin >> wada))
-    {
-        if (cin.good() < 0)
-        {
-            cin.clear();
-            system("cls");
-            while (cin.get() != '\n');
-
-        }
-        else
-        {
-            cin.clear();
-            system("cls");
-            while (cin.get() != '\n');
-        }
-
-    };
     cout << "Введите номер задания: ";
     int exercise;
     cin >> exercise;
@@ -44,10 +27,10 @@ int main()
         break;
     case 3:
         cout << "------3------" << endl;
-        unsigned int f, g;
+        int f, g;
         cout << "1 значение: " && cin >> f;
         cout << "2 значение: " && cin >> g;
-        cout << a.DoubleInt(f, g) << endl;
+        a.DoubleInt(f, g);
         break;
     case 4:
         cout << "------4------" << endl;
@@ -55,6 +38,50 @@ int main()
         cout << "Номинал: " && cin >> h;
         cout << "Количество: " && cin >> j;
         a.IcountMoney(h, j);
+        break;
+    case 5:
+        cout << "------5------" << endl;
+        int i, l;
+        cout << "Стоимость товара: " && cin >> i;
+        cout << "Количество: " && cin >> l;
+        a.CountProduct(i, l);
+        break;
+    case 6:
+        cout << "------6------" << endl;
+        int o;
+        double p;
+        cout << "Калорийность продукта на 100 Г: " && cin >> o;
+        cout << "Масса: " && cin >> p;
+        a.CountCCal(o, p);
+        break;
+    case 7:
+        cout << "------7------" << endl;
+        double u;
+        double v;
+        double q;
+        cout << "Число левого диапазона: " && cin >> u;
+        cout << "Число правого диапазона: " && cin >> v;
+        cout << "Число проверки: " && cin >> q;
+        cout << a.Diapason(u, v, q);
+        break;
+    case 8:
+        cout << "------8------" << endl;
+        cout << "Число левого диапазона: " && cin >> u;
+        cout << "Число правого диапазона: " && cin >> v;
+        cout << "Число проверки: " && cin >> q;
+        cout << a.DiapasonPlus(u, v, q);
+        break;
+    case 9:
+        cout << "------9------" << endl;
+        cout << "Число левого диапазона: " && cin >> i;
+        cout << "Число правого диапазона: " && cin >> l;
+        a.Timepuk(i,l);
+        break;
+    case 10:
+        cout << "------10------" << endl;
+        cout << "X: " && cin >> d;
+        cout << "Y: " && cin >> m;
+        cout << "Расстояние от начала координат до точки: " << a.CalcXY(d, m);
         break;
     default:
         cout << "Такой задачи нет." << endl;
