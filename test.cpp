@@ -1,5 +1,6 @@
 #include "test.h"
 #include <math.h>
+#include <ctime>
 #include <iostream>
 using namespace std;
 
@@ -24,7 +25,7 @@ void test::CountProduct(int& a, int& b)
 }
 
 
-void test::IcountMoney(unsigned int&a, unsigned int&b)
+void test::IcountMoney(int&a, int&b)
 {
 	if (a && b >= 0)
 	{
@@ -70,6 +71,18 @@ double test::CalcXY(double&a, double&b)
 	return sqrt(pow(a, 2) + pow(b, 2));
 }
 
+void test::CalcSalary(double&a, int&b)
+{
+	cout << "Зарплата: " << a / 22 * b;
+}
+void test::CalcPhoneCall(double&a, double&b)
+{
+	cout << a * b;
+}
+void test::DoubleMultiply(double&a, double&b, double &c)
+{
+	b > 0 ? cout << (a + b) * c : cout << "Неверный формат";
+}
 void test::PositiveNumber(int &a)
 {
 	while (!(cin >> a) || a < 0)
